@@ -258,6 +258,25 @@
         font-size: 0.9rem;
       }
     }
+    /* 사이드바 안 모든 이미지에 안전장치 */
+.sidebar img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 프로필 사진 고정 크기 강제 */
+.profile-photo {
+  width: 140px !important;
+  height: 140px !important;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 2rem;
+  border: 4px solid var(--light-gray);
+  flex-shrink: 0;   /* flexbox가 사이즈 줄이지 못하게 */
+  box-sizing: border-box;
+}
+
   </style>
 </head>
 <body>
@@ -265,7 +284,7 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
-     <img class="profile-photo" src="./profile.jpg" alt="증명사진">
+      <img class="profile-photo" src="./profile.jpg" alt="증명사진">
 
 
       <h2>CONTACT</h2>
@@ -327,7 +346,7 @@
       <div class="work-experience">
         <div class="job-item">
           <div class="job-header">
-            <span> </span>
+            <span></span>
             <span>2025.08- 2025.12</span>
           </div>
           <div class="company">멋쟁이사자처럼 그로스마케팅 3기</div>
